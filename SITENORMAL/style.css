@@ -1,0 +1,464 @@
+/*CONFING GLOBAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+}
+
+.navegação{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*NAVEGAÇÃO*/
+
+header {
+    padding: 2px 1%;
+}
+
+header > .navegação {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    position: relative;
+    top: 11px;
+}
+
+header a{
+    color: #6a6767;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+header .btn-nav button{
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #00ff08;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #07a204;
+}
+
+header .btn-nav button:hover{
+    box-shadow: 0px 0px 8px #04ff00;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+/*NAVEGAÇÂO > CART */
+
+.btn-abrir-cart i{
+    color: #3bf15c;
+    font-size: 45px;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+    display: none;
+}
+
+.Cart{
+    background: #1e1e1e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.Cart .btn-fechar{
+    color: #3bf15c;
+    padding: 20px 5%;
+    font-size: 20px;
+}
+
+.Cart.abrir-menu{
+    width: 50%;
+}
+
+.Cart.abrir-menu ~ .overlay-cart{
+    display: block;
+}
+
+.Cart nav ul{
+    text-align: center;
+}
+
+.Cart nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+}
+
+.Cart nav ul li a:hover{
+   opacity: 0.7;
+   transform: scale(1.05);
+}
+
+.Cart .btn-action{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.Cart .btn-action button{
+    padding: 15px 60px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #00ff08;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #07a204;
+    justify-content: center;
+}
+
+.overlay-cart{
+    background: #0000002f;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/*FIM DO CART*/
+
+/*TOPO SITE*/
+
+.flex {
+    display: flex;
+}
+
+section.topo-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+section.topo-site{
+    padding: 30px 13.5%;
+}
+
+.topo-site  h1{
+    color: #3bf15c;
+    font-size: 42px;
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+.topo-site .topo-site-texto h1 span{
+    color: #fff;
+}
+
+.topo-site .topo-site-texto p{
+    color: #fff;
+    margin: 30px 0;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.topo-site .btn-contato button{
+    padding: 15px 60px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #00ff08;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #07a204;
+}
+
+.topo-site .btn-contato button:hover{
+    box-shadow: 0px 0px 8px #04ff00;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.topo-site .topo-site-img img{
+    padding-left: 50px;
+    position: relative;
+    animation: Flutuar 1s ease-in-out infinite alternate;
+}
+
+@keyframes Flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+/*Especialidades topico*/
+
+section.Especialidades{
+    padding:30px 7%;
+}
+
+section .interface > h2{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+
+section .interface > h2 span{
+    color: #3bf15c;
+}
+
+section.Especialidades  .flex{
+    gap: 60px;
+}
+
+section.Especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    transition: .2s;
+}
+
+section.Especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #6a6767;
+}
+
+section.Especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #3bf15c;
+}
+
+section.Especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/*TOPICO SOBRE*/
+
+section.Sobre{
+    padding: 50px 7%;
+}
+
+section.Sobre  .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+section.Sobre .img-sobre img{
+    border-radius: 10px;
+}
+
+section.Sobre .text-sobre h2{
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+section.Sobre .text-sobre h2 span{
+    color: #3bf15c;
+    display: block;
+}
+
+section.Sobre .text-sobre p{
+    color: #fff;
+    margin: 30px 0;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: justify;
+}
+
+/*TOPICO CAPA*/
+
+section.Capa{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1c;
+}
+
+section.Capa .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+section.Capa .img-capa img{
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+section.Capa .img-capa img:hover{
+    transition: .2s;
+    transform: scale(1.07);
+    opacity: 0.7;
+}
+
+/*CADASTRO*/
+
+section.Cadastro{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    width: 120px;
+    background: #00ff08;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px #04ff00;
+}
+
+form .btn-enviar input[type=submit]:hover{
+    box-shadow: 0px 0px 8px #04ff00;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+
+@media screen and (max-width: 1020px){
+
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    .btn-abrir-cart i{
+        display: block;
+    }
+
+    /*CABEÇALHO*/
+    .menu, .btn-nav{
+        display: none;
+    }
+
+    /*TOPO DO SITE*/
+
+    section.topo-site{
+        padding: 20px 8%;
+    }
+
+    .topo-site  h1{
+        font-size: 30px;
+    }
+
+    .topo-site .topo-site-img img{
+        width: 100%;
+    }
+
+    /*Especialidades topico*/
+
+    section.Especialidades{
+        padding:10px 9%;
+    }
+
+    section .interface > h2{
+        margin-top: 50px;
+        font-size: 23px;
+    }
+
+    section.Especialidades .especialidades-box{
+        box-shadow: 0 0 8px #6a6767;
+    }
+    
+    section.Especialidades  .flex{
+        gap: 2px;
+    }
+
+    /*TOPICO SOBRE*/
+
+    section.Sobre{
+        padding: 80px 8%;
+    }
+
+    section.Sobre .text-sobre h2{
+        font-size: 32px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /*CAPA*/
+
+    section.Capa{
+        padding: 30px 15%;
+    }
+
+    section.Capa .flex{
+        gap: 20px;
+    }
+
+    section.Capa h2{
+        margin-top: 20px;
+        margin-bottom: -10px;
+    }
+
+    /*CADASTRO*/
+
+    section.Cadastro{
+        padding: 80px 9%;
+    }
+
+}
